@@ -1,0 +1,12 @@
+version: "3.9"
+
+volumes:
+  data:
+
+networks:
+  net:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br-${BRIDGE-nestjs-test}-1
+
+services:

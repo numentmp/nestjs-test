@@ -1,0 +1,14 @@
+services: # ignore line
+  db:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD-password}
+      APP_DB_USER: ${APP_DB_USER-app}
+      APP_DB_PASS: ${APP_DB_PASS-password}
+      APP_DB_NAME: ${APP_DB_NAME-app}
+      APP_DB_CARS: ${APP_DB_CARS-100}
+    networks:
+      - net
+    volumes:
+      - "data:/var/lib/mysql"
+      - "./initdb.d:/docker-entrypoint-initdb.d:z"

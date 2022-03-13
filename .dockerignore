@@ -1,0 +1,15 @@
+/.idea
+/.env
+
+/app/node_modules
+
+/.git
+/.gitignore
+
+/initdb.d
+/common.sh
+/dev.*
+/demo.*
+/prod.*
+
+/docs
