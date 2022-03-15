@@ -14,7 +14,7 @@ fi
 
 declare -g SCRIPT_DIR=`dirname "$0"`
 cd "$SCRIPT_DIR" || exit 1
-source common.sh || exit 1
+source common.sh_ || exit 1
 
 declare -g APP_DB_USER="${APP_DB_USER-app}"
 declare -g APP_DB_PASS="${APP_DB_PASS-password}"
